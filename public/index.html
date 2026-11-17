@@ -1,40 +1,41 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <title>Copy &amp; Paste, Word &amp; Character counter and Statistics app React and Redux</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="theme-color" content="#000000">
-  <meta name="description" content="Copy &amp; Paste Words and Character counter using Javascript, React" />
-  <meta name="keywords" content="Javascript,React,Word Count,Counter,Character counter,Character count,Word Counter,Deepu,Mohan,Puthrote,Deepu Mohan, Deepu Puthrote, Mohan Puthrote, Deepu Mohan Puthrote" />
-  <meta name="author" content="Deepu Mohan Puthrote" />
-  <meta name="copyright" content="Deepu Mohan Puthrote" />
-  <meta name="classification" content="public" />
-  <meta name="resource-type" content="document" />
-  <!--
-      manifest.json provides metadata used when your web app is added to the
-      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
-    -->
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-  <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word and Character Counter</title>
 </head>
-
 <body>
-  <noscript>
-      You need to enable JavaScript to run this app.
-  </noscript>
-  <div id="root"></div>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.0/dist/semantic.min.css" />
-</body>
 
+    <h1>Word and Character Counter</h1>
+
+    <p>
+        Enter your text below to analyze words,
+        characters, sentences, and paragraphs.
+    </p>
+
+    <h2>Enter Your Text</h2>
+
+    <textarea id="textInput" rows="10" cols="50"
+        placeholder="Type or paste your text here..."></textarea>
+
+    <h3>Upload a Text File</h3>
+    <input type="file" id="fileInput" accept=".txt">
+
+    <h2>Text Analysis</h2>
+
+    <button onclick="analyzeText()">Analyze Text</button>
+    <button onclick="clearText()">Clear Text</button>
+
+    <h3>Results</h3>
+
+    <p>Words: <span id="wordCount">0</span></p>
+    <p>Characters: <span id="charCount">0</span></p>
+    <p>Sentences: <span id="sentenceCount">0</span></p>
+    <p>Paragraphs: <span id="paragraphCount">0</span></p>
+
+    <script src="script.js"></script>
+
+</body>
 </html>
